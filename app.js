@@ -2,39 +2,6 @@ require('dotenv').config();
 const puppeteer = require('puppeteer');
 const nodeCron = require("node-cron");
 
-const blockResourceType = [
-    'beacon',
-    'csp_report',
-    'font',
-    'image',
-    'imageset',
-    'media',
-    'object',
-    'texttrack',
-];
-
-const blockResourceName = [
-    'adition',
-    'adzerk',
-    'analytics',
-    'cdn.api.twitter',
-    'clicksor',
-    'clicktale',
-    'doubleclick',
-    'exelator',
-    'facebook',
-    'fontawesome',
-    'google',
-    'google-analytics',
-    'googletagmanager',
-    'mixpanel',
-    'optimizely',
-    'quantserve',
-    'sharethrough',
-    'tiqcdn',
-    'zedo',
-];
-
 async function run(){
     // First, we must launch a browser instance
     const browser = await puppeteer.launch({
